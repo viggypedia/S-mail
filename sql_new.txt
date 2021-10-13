@@ -1,0 +1,59 @@
+
+Create Table Scripts
+====================================================
+
+1. User_info Table
+=======================
+
+create table user_info (id varchar(100) primary key  , name varchar(100) not null , dob datetime not null, alternate_id varchar(100) , mobile_no int , gender varchar (100) not null , passwd varchar(100) not null , user_type varchar (1) not null);
+
+alter table user_info add status varchar(10);
+
+2: Mail_box table
+==================
+
+create table mail_box (mail_id int primary key auto_increment , sender_id varchar(100) not null ,date datetime not null, sub text, body text , attachment blob , receiver_id varchar(100) not null,FOREIGN KEY(sender_id) REFERENCES user_info(id));
+
+
+
+Data Insertion Scripts
+========================================================
+
+
+1. Inserting records into User_info table:
+=========================================
+
+insert into user_info values("vickypedia", "Vignesh", "2003/03/04", NULL, NULL ,"M","sowmy123","U",NULL);
+
+insert into user_info values ("admin", "admin","2003/03/04", NULL, NULL,"M","admin123","A",NULL); 
+
+insert into user_info values("shreya005", "Shreya", "2003/03/22", NULL, NULL ,"M","sowmy123","U",NULL);
+
+2. selecting all details of all users
+=======================================
+
+select * from user_info;
+
+2. Data Selection
+Selecting details of a particular user
+=========================================
+
+select * from user_info where id="vignesh";
+
+4. delete from user_info table;
+==================================
+
+update user_info set status="D" where id="vickypedia";
+
+5. Counting the number of active users in the system
+=======================================================
+select count(*) from user_info where status is NULL;
+
+
+select status, count(id) from user_info group by status;
+
+numbers of user deleted
+=========================
+select count(*) from user_info where status is not NULL;
+
+
