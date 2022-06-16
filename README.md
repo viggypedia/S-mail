@@ -7,7 +7,7 @@ Requirements:
 Next, just copy paste the MySQL commands under the SQL txt file in the MySQL cli, to create the databse required for the functioning of the database.
 There are two parts of the python code: 
 1. The main python file which calls all the modules.
-2. The module file which cintains the functions required.
+2. The module file which contains the functions required.
 
 Future devilopment in the same Project:
 1. POC of using blockchain for mailing systems.
