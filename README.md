@@ -9,6 +9,7 @@ There are two parts of the python code:
 1. The main python file which calls all the modules.
 2. The module file which contains the functions required.
 
-Future devilopment in the same Project:
-1. POC of using blockchain for mailing systems.
-2. GUI devolopment.
+Future Scope:
+1. Use of blockchain for communication.
+2. GUI devolopment if required.
+3. PQ resistant mailing features.
